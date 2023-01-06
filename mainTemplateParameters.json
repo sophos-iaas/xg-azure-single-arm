@@ -1,0 +1,30 @@
+{
+	"$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"_artifactsLocation": {
+                        "value": "https://pgaurstorage1.blob.core.windows.net/sophosnsgimages/github-xg-azure/"
+		},
+		"vmName": {
+			"value": "SingleArm-XG"
+		},
+		"adminPassword": {
+			"value": "Sophos@123"
+		},
+		"netName": {
+			"value": "VNET"
+		},
+		"netPrefix": {
+			"value": "10.0.0.0/16"
+		},
+		"wanName": {
+			"value": "WAN"
+		},
+		"wanPrefix": {
+			"value": "10.0.1.0/24"
+		},
+		"imageSku": {
+			"value": "byol"
+		}
+	}
+}

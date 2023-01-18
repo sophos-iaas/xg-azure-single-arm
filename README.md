@@ -1,5 +1,5 @@
 # sophos-firewall-azure
-Deployment template to deploy Sophos firewall to Azure
+Deployment template to deploy Sophos firewall to Azure in Single Arm Mode.
 
 Deploying
 =========

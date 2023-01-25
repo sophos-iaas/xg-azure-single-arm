@@ -1,0 +1,106 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "vmName": {
+            "type": "string"
+        },
+        "vmSize": {
+            "type": "string"
+        },
+        "adminPassword": {
+            "type": "securestring"
+        },
+        "imageSku": {
+            "type": "string"
+        },
+        "availabilitySetId": {
+            "type": "string"
+        },
+        "storageAccountEndpoint": {
+            "type": "string"
+        },
+        "interfaceRefWan": {
+            "type": "string"
+        },
+        "location":{
+            "type": "string"
+        },
+        "devFwBlobUrlPrefix": {
+            "type": "string"
+        }
+    },
+    "variables": {
+        "imagePublisher": "sophos",
+        "imageOffer": "sophos-xg",
+        "adminUsername": "azureuser"
+    },
+    "resources": [
+        {
+            "apiVersion": "2019-07-01",
+            "type": "Microsoft.Compute/virtualMachines",
+            "name": "[parameters('vmName')]",
+            "plan": {
+                "publisher": "[variables('imagePublisher')]",
+                "product": "[variables('imageOffer')]",
+                "name": "[parameters('imageSku')]"
+            },
+            "location": "[parameters('location')]",
+            "properties": {
+                "availabilitySet": {
+                    "id": "[parameters('availabilitySetId')]"
+                },
+                "hardwareProfile": {
+                    "vmSize": "[parameters('vmSize')]"
+                },
+                "osProfile": {
+                    "computerName": "[parameters('vmName')]",
+                    "adminUsername": "[variables('adminUsername')]",
+                    "adminPassword": "[parameters('adminPassword')]"
+                },
+                "storageProfile": {
+                    "imageReference": {
+                        "publisher": "[variables('imagePublisher')]",
+                        "offer": "[variables('imageOffer')]",
+                        "sku": "[parameters('imageSku')]",
+                        "version": "latest"
+                    },
+                    "dataDisks": [
+                        {
+                            "name": "[concat(parameters('vmName'),'-dataDisk')]",
+                            "lun": 0,
+                            "createOption": "FromImage",
+                            "managedDisk": {
+                                "storageAccountType": "Standard_LRS"
+                            }
+                        }
+                    ],
+                    "osDisk": {
+                        "name": "[concat(parameters('vmName'),'-osDisk')]",
+                        "caching": "ReadWrite",
+                        "createOption": "FromImage",
+                        "managedDisk": {
+                            "storageAccountType": "Standard_LRS"
+                        }
+                    }
+                },
+                "networkProfile": {
+                    "networkInterfaces": [
+                        {
+                            "id": "[parameters('interfaceRefWan')]",
+                            "properties": {
+                                "primary": true
+                            }
+                        }
+                    ]
+                },
+                "diagnosticsProfile": {
+                    "bootDiagnostics": {
+                        "enabled": "true",
+                        "storageUri": "[concat(take(parameters('devFwBlobUrlPrefix'),0), parameters('storageAccountEndpoint'))]"
+                    }
+                }
+            }
+        }
+    ]
+}

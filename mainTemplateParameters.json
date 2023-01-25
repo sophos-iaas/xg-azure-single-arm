@@ -1,0 +1,30 @@
+{
+	"$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"_artifactsLocation": {
+                        "value": "https://sophosnsgimages.blob.core.windows.net/templates/xg-azure-single-arm/"
+		},
+		"vmName": {
+			"value": "Sophos-Firewall"
+		},
+		"adminPassword": {
+			"value": "Sophos20202020!"
+		},
+		"netName": {
+			"value": "VNET"
+		},
+		"netPrefix": {
+			"value": "10.0.0.0/16"
+		},
+		"wanName": {
+			"value": "WAN"
+		},
+		"wanPrefix": {
+			"value": "10.0.1.0/24"
+		},
+		"imageSku": {
+			"value": "byol"
+		}
+	}
+}

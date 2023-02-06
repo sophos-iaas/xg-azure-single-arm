@@ -480,6 +480,7 @@
                         "value": "[reference('SettingUpLoadbalancer').outputs.lbBackendID.value]"
                     },
                     "inboundNatID": {
+                        "value": "[concat(reference('SettingUpLoadbalancer').outputs.inboundNatIDPrefix.value, '-', copyIndex())]"
                     },
                     "networkSecurityGroupId": {
                         "value": "[resourceId('Microsoft.Compute/networkSecurityGroups',parameters('networkSecurityGroupName'))]"

@@ -1,4 +1,4 @@
-# sophos-firewall-azure
+# sophos-firewall-azure-single-arm
 Deployment template to deploy Sophos firewall to Azure in Single Arm Mode.
 
 Deploying
@@ -9,7 +9,7 @@ Deployment via Marketplace
 
 1) Go to Azure Marketplace: https://azuremarketplace.microsoft.com/marketplace/apps?search=Sophos%20XG
 
-2) Select the "'Sophos Firewall' offer and follow the deployment wizard.
+2) Select the 'Sophos Firewall Single Arm' offer and follow the deployment wizard.
 
 Deployment via template
 -----------------------
@@ -90,6 +90,6 @@ A example that deploy a standalone Sophos Firewall in a resource group with pref
 
 For more information about the deploy.sh, run `deploy.sh --help`.
 
-Wiki: https://wiki.sophos.net/display/NSG/Testing+XG+Deployments+on+Azure
+Wiki: https://sophos.atlassian.net/wiki/spaces/NSG/pages/226390213763/Testing+XG+Deployments+on+Azure+in+Single+ARM+mode
 
 PS: make sure the dev blob is in the same region as the deployment.

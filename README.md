@@ -93,3 +93,22 @@ For more information about the deploy.sh, run `deploy.sh --help`.
 Wiki: https://sophos.atlassian.net/wiki/spaces/NSG/pages/226390213763/Testing+XG+Deployments+on+Azure+in+Single+ARM+mode
 
 PS: make sure the dev blob is in the same region as the deployment.
+
+Release Instructions
+====================
+
+Push ARM template changes on github from Sophos-internal to Sophos IaaS. 
+
+Release the new Single ARM template to Azure Market place
+
+Release Notes to be added if anything is newly added
+
+Documentation changes : (Raise the Jira tickets with the documentation team), and list the items as:
+- Non supported features
+- Deployment scenarios 
+- Update the docs.sophos.com for the single arm deployment for Azure SFOS
+- Update the section in the online help
+
+Legal Review? — (check with the PM team)
+
+Update the wiki links pointing the latest VHDs for Single ARM (PM team needs to do that)

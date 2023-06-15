@@ -18,7 +18,7 @@ Deployment via template
 
 [![Deploy to Azure](assets/deploybutton.png)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fsophos-iaas%2Fxg-azure-single-arm%2Fmaster%2FmainTemplate.json)
 
-[![Deploy to Azure Gov](https://azuredeploy.net/AzureGov.png)](https://portal.azure.us/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fsophos-iaas%2Fxg-azure-single-arm%2Fmaster%2FmainTemplate.json)
+[![Deploy to Azure Gov](assets/deploybutton.png)](https://portal.azure.us/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fsophos-iaas%2Fxg-azure-single-arm%2Fmaster%2FmainTemplate.json)
 
 2) Take a look on the example values for template parameters in `mainTemplateParameters.json`.
 

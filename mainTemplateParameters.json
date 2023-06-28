@@ -3,7 +3,7 @@
 	"contentVersion": "1.0.0.0",
 	"parameters": {
 		"_artifactsLocation": {
-                        "value": "https://sophosnsgimages.blob.core.windows.net/templates/xg-azure-single-arm/"
+                        "value": "https://sophosnsgimages.blob.core.windows.net/templates/github-xg-azure-single-arm/"
 		},
 		"vmName": {
 			"value": "Sophos-Firewall"

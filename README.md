@@ -67,7 +67,7 @@ We also provide an example template for High Availability deployments which will
 
 Configuration sync between the Sophos Firewall nodes can be done by using SCFM. Please reach out to your sales or channel representative to learn more about this Sophos product.
 
-[![Deploy to Azure](https://azuredeploy.net/deploybutton.png)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fsophos-iaas%2Fxg-azure%2Fmaster%2FinboundHa.json)
+[![Deploy to Azure](assets/deploybutton.png)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fsophos-iaas%2Fxg-azure%2Fmaster%2FinboundHa.json)
 
 ***
 
@@ -76,39 +76,4 @@ Useful Links
 
 * [Authoring Azure Resource Manager templates](https://azure.microsoft.com/en-us/documentation/articles/resource-group-authoring-templates/)
 
-
 ***
-
-Testing Instructions
-====================
-
-To deploy the templates through CLI, you could use the script deploy.sh. The default parameters file is the mainTemplateParameters.json. In order to test nestedtemplates, make sure they are publicly accessible by Azure and change the value of parameter '**_artifactsLocation**' to it
-
-A example that deploy a standalone Sophos Firewall in a resource group with prefix 'sophostest0' and using the dev blob 'SFAZ01_SO01.Generic.18.0.0.2112.byol' in East US region.
-
-`deploy.sh -n sophostest0 -l eastus -i https://where.is.your.vhd.bolb.stored/SFAZ01_SO01.Generic.18.0.0.2112.byol`
-
-For more information about the deploy.sh, run `deploy.sh --help`.
-
-Wiki: https://sophos.atlassian.net/wiki/spaces/NSG/pages/226390213763/Testing+XG+Deployments+on+Azure+in+Single+ARM+mode
-
-PS: make sure the dev blob is in the same region as the deployment.
-
-Release Instructions
-====================
-
-Push ARM template changes on github from Sophos-internal to Sophos IaaS. 
-
-Release the new Single ARM template to Azure Market place
-
-Release Notes to be added if anything is newly added
-
-Documentation changes : (Raise the Jira tickets with the documentation team), and list the items as:
-- Non supported features
-- Deployment scenarios 
-- Update the docs.sophos.com for the single arm deployment for Azure SFOS
-- Update the section in the online help
-
-Legal Review? — (check with the PM team)
-
-Update the wiki links pointing the latest VHDs for Single ARM (PM team needs to do that)

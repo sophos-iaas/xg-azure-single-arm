@@ -1,4 +1,4 @@
-# sophos-firewall-azure-single-arm
+# xg-azure-single-arm
 Deployment template to deploy Sophos firewall to Azure in Single Arm Mode.
 
 Deploying

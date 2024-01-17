@@ -67,7 +67,7 @@ We also provide an example template for High Availability deployments which will
 
 Configuration sync between the Sophos Firewall nodes can be done by using SCFM. Please reach out to your sales or channel representative to learn more about this Sophos product.
 
-[![Deploy to Azure](assets/deploybutton.png)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fsophos-iaas%2Fxg-azure%2Fmaster%2FinboundHa.json)
+[![Deploy to Azure](assets/deploybutton.png)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fsophos-iaas%2Fxg-azure-single-arm%2Fmaster%2FinboundHa.json)
 
 ***
 

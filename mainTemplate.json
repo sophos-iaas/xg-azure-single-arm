@@ -130,7 +130,7 @@
                 "Dynamic",
                 "Static"
             ],            
-            "defaultValue": "Dynamic",
+            "defaultValue": "Static",
             "metadata": {
                 "description": "Allocation method of the public ip of the VM"
             }
@@ -341,6 +341,9 @@
                     },
                     "location": {
                         "value": "[parameters('location')]"
+                    },
+                    "publicIPAddressSku": {
+                        "value": "Standard"
                     }
                 }
             }
